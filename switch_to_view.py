@@ -39,9 +39,6 @@ class SbpSwitchToViewCommand(SbpTextCommand):
         if not self.preview:
             return
         self.highlight_count += 1
-        if self.highlight_count > 1:
-            if self.group_views is None or self.views[index].id() in self.group_views:
-                self.window.focus_view(self.views[index])
 
     def get_items(self):
         if self.display_components > 0:
